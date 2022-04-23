@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+ 
+
+{% block content %}
+    <ul style="list-style: none;">
+        {% for x in article %}
+            <li> {{ x.id }} <a href="articles/{{ x.id }}"> {{ x.title }} </a></li>        
+        {% endfor %}
+    </ul>
+{% endblock  %}
