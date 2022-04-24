@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
 {% if not request.user.is_authenticated %}
 <div>
@@ -10,7 +9,7 @@
         {% endif %}
         <input type="text" name="username" placeholder="username"><br><br>
         <input type="password" name="password" placeholder="password"><br><br>
-        <button type="submit"> Submit </button>
+        <button type="submit">  Submit  </button>
     </form>
 </div>
 {% else %}
