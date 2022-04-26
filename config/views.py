@@ -6,9 +6,11 @@ from django.template.loader import render_to_string
 
 
 def home_view(request):
+    """ Home view """
     name = 'justin'
     number = randint(1,2)
     # Database
+    
     article = Article.objects.all()
 
     context = {
