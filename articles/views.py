@@ -7,8 +7,6 @@ from .forms import ArticleForm
 
 
 
-
-
 def article_search_view(request):
     query_set = request.GET
     try:
@@ -48,5 +46,6 @@ def article_detail_view( request , id = None ):
     context = {
         "article_obj": article_obj
     }
+    
     return render( request , 'articles/detail.html' , context=context )
 
