@@ -17,6 +17,6 @@ def home_view(request):
         'article': article
     }
 
-    HTML_STRING =  render_to_string('salom.html',context=context)
+    HTML_STRING =  render_to_string( 'salom.html' , context=context )
 
-    return HttpResponse(HTML_STRING)
+    return HttpResponse( HTML_STRING )
