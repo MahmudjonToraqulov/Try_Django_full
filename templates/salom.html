@@ -2,9 +2,11 @@
  
 
 {% block content %}
+    <a href="{% url 'article-create' %}">Article Create</a> 
+    <a href="{% url 'article-detail' slug='hello-world' %}">Hello World</a> 
     <ul style="list-style: none;">
         {% for x in article %}
-            <li> {{ x.id }} <a href="articles/{{ x.id }}"> {{ x.title }} </a></li>        
+            <li> {{ x.id }} <a href="{{ x.get_absolute_url  }}"> {{ x.title }} </a></li>        
         {% endfor %}
     </ul>
 {% endblock  %}
