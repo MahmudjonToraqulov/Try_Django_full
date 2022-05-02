@@ -21,6 +21,7 @@ class ArticleManager(models.Manager):
     def get_queryset(self):
         return ArticleQuerySet(self.model,using=self._db)
 
+
     def search(self,query=None): 
         return self.get_queryset().search(query=query)
 
